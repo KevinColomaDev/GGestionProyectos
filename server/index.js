@@ -7,15 +7,9 @@ const async = require('async');
 app.use(express.json());
 app.use(cors());
 
-const cors = require('cors');
-app.use(cors({
-    origin: 'http://10.157.152.50:3001', // Reemplaza con el origen de tu frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
 
 const db = mysql.createConnection({
-    host: '10.157.152.50',
+    host: 'localhost',
     user: 'kcoloma',
     password: '1234',
     database: 'gestion_proyectos'
